@@ -1,16 +1,123 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
-  box-sizing: border-box;
+  /* color: #000000; */
+}
+
+body {
+  max-width: 100vw;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+.h1 {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 74px;
+}
+
+.h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.h3 {
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 56px;
+}
+
+.h4 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 56px;
+}
+
+.h5 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.h6 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.body-1 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.body-2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.label-1 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.label-2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.btn-outlined,
+.btn {
+  padding: 6px 25px;
+  border: 1px solid #bbbbcb;
+  border-radius: 9999px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  width: fit-content;
+}
+
+.btn {
+  background: #fcd980;
+  border: none;
+  color: #1b1c2b;
+}
+
+.btn-large {
+  padding: 12px 38px;
+}
+
+.glass-bg-1 {
+  background: linear-gradient(
+    162.7deg,
+    rgba(255, 255, 255, 0.16) 11.87%,
+    rgba(196, 196, 196, 0) 128.82%
+  );
+}
+
+.glass-bg-2 {
+  background: linear-gradient(
+    160.38deg,
+    rgba(255, 255, 255, 0.17) 13.14%,
+    rgba(0, 0, 0, 0) 211.84%
+  );
+}
+.glass-bg-3 {
+  background: linear-gradient(304.98deg, #40416e -121.05%, #5a5b8b 172.98%);
+}
+.glass-bg-4 {
+  background: linear-gradient(
+    104.13deg,
+    rgba(255, 255, 255, 0.15) 39.94%,
+    rgba(196, 196, 196, 0) 166.75%
+  );
 }
