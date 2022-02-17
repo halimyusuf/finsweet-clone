@@ -75,8 +75,8 @@ body {
 
 .btn-outlined,
 .btn {
-  padding: 6px 25px;
-  border: 1px solid #bbbbcb;
+  padding: 8px 30px;
+  border: 1px solid rgba(187, 187, 203, 0.4);
   border-radius: 9999px;
   color: white;
   cursor: pointer;
@@ -90,6 +90,10 @@ body {
   background: #fcd980;
   border: none;
   color: #1b1c2b;
+}
+
+.btn-outlined:hover {
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 .btn-large {
@@ -120,4 +124,8 @@ body {
     rgba(255, 255, 255, 0.15) 39.94%,
     rgba(196, 196, 196, 0) 166.75%
   );
+}
+
+.glass-bg-5 {
+  background: rgba(255, 255, 255, 0.17);
 }
