@@ -5,13 +5,13 @@ import { navItems } from "../../data/nav";
 function Navbar() {
   return (
     <div>
-      <div className="bg-tintblue h-[92px]">
+      <div className="bg-tintblue h-[82px]">
         <div className="h-full flex justify-between items-center container mx-auto">
           <div>
             <Image src="/nav/logo.svg" alt="logo" height="28" width="122" />
           </div>
-          <div>
-            <div className="flex items-center">
+          <div className="flex">
+            <div className="flex items-center mr-4">
               <>
                 {navItems.map((nav) => (
                   <div
@@ -22,8 +22,8 @@ function Navbar() {
                   </div>
                 ))}
               </>
-              <div className="btn-outlined">Contact us</div>
             </div>
+            <div className="btn-outlined">Contact us</div>
           </div>
         </div>
       </div>
