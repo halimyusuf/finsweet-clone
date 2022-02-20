@@ -1,3 +1,12 @@
+import {
+  UsersIcon,
+  CheckCircleIcon,
+  PencilAltIcon,
+  QuestionMarkCircleIcon,
+  ClockIcon,
+  DocumentTextIcon,
+} from "@heroicons/react/solid";
+
 export const gradientBox1 = [
   {
     line: "100%",
@@ -83,4 +92,80 @@ export const dotC = [
   "#fed280",
   "rgba(140, 254, 227, 0.9)",
   "rgba(255, 141, 169, 0.9)",
+];
+
+export const howWeWork = [
+  {
+    n: "01",
+    title: "Strategy",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .",
+  },
+  {
+    n: "02",
+    title: "Wireframing",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .",
+  },
+  {
+    n: "03",
+    title: "Design",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .",
+  },
+  {
+    n: "04",
+    title: "Development",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam .",
+  },
+];
+
+export const sect4Cards = [
+  {
+    title: "Uses Client First",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi. ",
+    icon: UsersIcon,
+  },
+  {
+    title: "Two Free Revision Round",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi. ",
+    icon: CheckCircleIcon,
+  },
+  {
+    title: "Template Customization",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi.",
+    icon: PencilAltIcon,
+  },
+  {
+    title: "24/7 Support",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi.",
+    icon: QuestionMarkCircleIcon,
+  },
+  {
+    title: "Quick Delivery",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi. ",
+    icon: ClockIcon,
+  },
+  {
+    title: "Hands-on approach",
+    label:
+      "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi. ",
+    icon: DocumentTextIcon,
+  },
+];
+
+export const reviews = [
+  {
+    text: "The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.",
+    name: "Jenny Wilson",
+    src: "/home/woman-in-collared-shirt.png",
+    work: "Dev at google",
+    // https://www.pexels.com/photo/woman-in-collared-shirt-774909/
+  },
 ];
