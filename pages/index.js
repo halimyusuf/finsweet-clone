@@ -11,6 +11,7 @@ import {
 } from "../data/home";
 import classes from "../styles/Home.module.css";
 import { UsersIcon } from "@heroicons/react/solid";
+import Faq from "../components/common/Faq";
 
 export default function Home() {
   return (
@@ -202,8 +203,8 @@ export default function Home() {
         </div>
       </div>
       {/* sect 5 */}
-      <div>
-        <div className="container mx-auto py-10">
+      <div className="bg-grey bg-opacity-50">
+        <div className="container mx-auto py-14">
           <div className="grid grid-cols-3 gap-12">
             <div className="col-span-1">
               <div className="h3 mb-4">What our clients say about us</div>
@@ -220,6 +221,12 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </div>
+      {/* sect 6 */}
+      <div>
+        <div className="py-14">
+          <Faq />
         </div>
       </div>
     </div>
