@@ -12,6 +12,7 @@ import {
 import classes from "../styles/Home.module.css";
 import { UsersIcon } from "@heroicons/react/solid";
 import Faq from "../components/common/Faq";
+import SendEnquiry from "../components/home/SendEnquiry";
 
 export default function Home() {
   return (
@@ -227,6 +228,12 @@ export default function Home() {
       <div>
         <div className="py-14">
           <Faq />
+        </div>
+      </div>
+
+      <div>
+        <div className="container mx-auto py-14">
+          <SendEnquiry />
         </div>
       </div>
     </div>
