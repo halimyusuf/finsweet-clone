@@ -8,27 +8,38 @@ import {
   howWeWork,
   sect4Cards,
   reviews,
+  HomeBlog,
 } from "../data/home";
 import classes from "../styles/Home.module.css";
-import { UsersIcon } from "@heroicons/react/solid";
 import Faq from "../components/common/Faq";
 import SendEnquiry from "../components/home/SendEnquiry";
+import BlogList from "../components/common/BlogList";
+import { Button, Card, CardContent, Typography } from "@mui/material";
 
 export default function Home() {
   return (
     <div>
       <div className="bg-tintblue text-white pb-20">
-        <div className="container mx-auto grid grid-cols-2 gap-4 pt-14">
+        <div className="px-3 container mx-auto grid grid-cols-1 md:grid-cols-2  gap-4 pt-8 md:pt-14">
           {/* column 1 */}
           <div>
-            <div className="h1">
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: "600", display: { xs: "block", lg: "none" } }}
+            >
               Building stellar websites for early startups
-            </div>
+            </Typography>
+            <Typography
+              variant="h2"
+              sx={{ fontWeight: "600", display: { xs: "none", lg: "block" } }}
+            >
+              Building stellar websites for early startups
+            </Typography>
             <div className="body-1 opacity-70 my-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt.
             </div>
-            <div className="flex items-center">
+            <div className="hidden items-center md:flex">
               <div className="btn btn-large mr-8 hover:bg-lightyellow">
                 View our work
               </div>
@@ -40,7 +51,7 @@ export default function Home() {
           </div>
           {/* column 2 */}
           <div>
-            <div className="aspect-video w-[100%] mx-auto glass-bg-1 rounded-lg relative py-3">
+            <div className="aspect-video w-[80%] mx-auto glass-bg-1 rounded-lg relative py-3">
               <div className="px-6 mx-auto h-[100%]">
                 <div className="glass-bg-4 w-full h-[18%] max-h-[33px] rounded-full px-4">
                   <div className="flex h-[100%] items-center">
@@ -82,7 +93,18 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              <div></div>
+            </div>
+          </div>
+          <div className="block mx-auto items-center text-center md:hidden mt-6 justify-center">
+            <Button
+              size="large"
+              className="bg-yellow text-black mr-8 hover:bg-lightyellow rounded-[999px] px-10"
+            >
+              <Typography variant="body-2 capitalize">View our work</Typography>
+            </Button>
+            <div className="body-1 cursor-pointer hover:underline flex items-center justify-center mt-5">
+              <div className="mr-2">View Pricing</div>
+              <ArrowRight />
             </div>
           </div>
         </div>
@@ -91,15 +113,15 @@ export default function Home() {
       {/* sect 2 */}
       <div>
         <div className="bg-grey py-14">
-          <div className="container mx-auto">
-            <div className="flex">
+          <div className="container px-3 mx-auto">
+            <div className="block md:flex">
               <div className="mr-16">
-                <div className="h2 text-darkblue">How we work</div>
+                <div className="h3 md:h2 text-darkblue">How we work</div>
                 <div className="body-1 text-darkblue opacity-70">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor.
                 </div>
-                <div className="text-blue flex items-center">
+                <div className="text-blue my-2 flex items-center cursor-pointer hover:underline">
                   <div className="text-blue mr-2 label-1">
                     Get in touch with us
                   </div>
@@ -129,10 +151,10 @@ export default function Home() {
       {/* sect 3 */}
 
       <div>
-        <div className="container mx-auto py-10">
+        <div className="px-3 container mx-auto py-10">
           <div className="flex justify-between items-center">
-            <div className="h2">View our projects</div>
-            <div className="flex items-center">
+            <div className="h3 md:h2">View our projects</div>
+            <div className="hidden md:flex items-center">
               <Link href={"/"}>
                 <div className="label-2 mr-3 cursor-pointer hover:underline">
                   View More
@@ -146,9 +168,6 @@ export default function Home() {
 
           <div className="mt-10">
             <div className="grid grid-rows-2 grid-cols-3 gap-4">
-              {/* <div className="row-span-2"></div>
-            <div className="row-span-1"></div>
-            <div className="row-span-1"></div> */}
               <div className="col-span-2 row-span-2 aspect-video">
                 <Image
                   src={"/home/Card.svg"}
@@ -175,22 +194,32 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="flex md:hidden items-center">
+            <Link href={"/"}>
+              <div className="label-2 mr-3 cursor-pointer hover:underline">
+                View More
+              </div>
+            </Link>
+            <div>
+              <ArrowRight />
+            </div>
+          </div>
         </div>
       </div>
 
       {/* sect 4 */}
       <div className="bg-grey">
-        <div className="container py-10 mx-auto">
+        <div className="px-3 container py-10 mx-auto">
           <div>
             <div className="label-2 text-center mb-2">Features</div>
-            <div className="h2 mx-auto text-center w-max-[80%]">
+            <div className="h3 mx-auto text-center w-max-[80%]">
               <div> Design that solves </div>
               <div>problems, one product at</div>
               <div>a time </div>
             </div>
           </div>
           <div className="mt-10">
-            <div className="grid grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {sect4Cards.map((item) => (
                 <SectCard
                   key={item.title}
@@ -205,9 +234,9 @@ export default function Home() {
       </div>
       {/* sect 5 */}
       <div className="bg-grey bg-opacity-50">
-        <div className="container mx-auto py-14">
-          <div className="grid grid-cols-3 gap-12">
-            <div className="col-span-1">
+        <div className="px-3 container mx-auto py-14">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-12">
+            <div className="md:col-span-1">
               <div className="h3 mb-4">What our clients say about us</div>
               {/* <div className="label-1 text-blue cursor-pointer hover:opacity-70">
                 Contact us for more info
@@ -216,7 +245,7 @@ export default function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit sed.
               </div>
             </div>
-            <div className="col-span-2">
+            <div className="md:col-span-2">
               {reviews.map((item) => (
                 <Reviews key={item.name} {...item} />
               ))}
@@ -226,14 +255,25 @@ export default function Home() {
       </div>
       {/* sect 6 */}
       <div>
-        <div className="py-14">
-          <Faq />
+        <div className="py-14">{/* <Faq /> */}</div>
+      </div>
+
+      <div>
+        <div className="container mx-auto pt-14">
+          <SendEnquiry />
         </div>
       </div>
 
       <div>
-        <div className="container mx-auto py-14">
-          <SendEnquiry />
+        <div className="px-3 container mx-auto pt-14">
+          <div className="h5">Our Blog</div>
+          <div className="mt-10">
+            <div className="grid lg:grid-cols-3 gap-4 sm:grid-cols-2">
+              {HomeBlog.map((item) => (
+                <BlogList key={item.id} {...item} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -281,7 +321,7 @@ function GradientLine2({ grds }) {
 
 function HowWeWorkCont({ number, desc, label }) {
   return (
-    <div className="mx-3">
+    <div className="mr-3 mt-5 md:ml-3 md:mt-0 max-w-[100%]">
       <div className={`${classes["item-count-cont"]} mb-3`}>
         <div className={`${classes["item-count-cont-inner"]}`}></div>
         <div className={`${classes["item-count-cont-inner1"]}`}></div>
@@ -289,7 +329,7 @@ function HowWeWorkCont({ number, desc, label }) {
           <div className="label-1 text-white">{number}</div>
         </div>
       </div>
-      <div className="h5 text-darkblue">{desc}</div>
+      <div className="h6 md:h5 text-darkblue">{desc}</div>
       <div className="body-1 text-darkblue opacity-70">{label}</div>
     </div>
   );
@@ -297,20 +337,25 @@ function HowWeWorkCont({ number, desc, label }) {
 
 function SectCard({ title, label, Icon }) {
   return (
-    <div className="bg-white px-7 py-7">
-      <div className="mb-4">
-        <Icon className="h-[35px] w-[30px] text-blue" />
-      </div>
-      <div className="h6 mb-2 text-darkblue">{title}</div>
-      <div className="body-1 text-darkblue opacity-70">{label}</div>
-    </div>
+    <Card className="bg-white">
+      <CardContent>
+        <div className="mb-4">
+          <Icon className="h-[35px] w-[30px] text-blue" />
+        </div>
+        <div className="h6 mb-2 text-darkblue">{title}</div>
+        <div className="body-1 text-darkblue opacity-70">{label}</div>
+      </CardContent>
+    </Card>
   );
 }
 
 function Reviews({ text, name, src, work }) {
   return (
     <div>
-      <div className="h6 text-darkblue mb-10">{text}</div>
+      {/* <div className="h6 text-darkblue mb-10"></div> */}
+      <Typography variant="h6" className="text-darkblue mb-4">
+        {text}
+      </Typography>
       <div className="flex">
         <div className="mr-5">
           <Image
