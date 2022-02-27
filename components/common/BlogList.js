@@ -7,27 +7,32 @@ import ArrowRight from "../icons/ArrowRight";
 function BlogList({ image_url: imgUrl, date, title, content, id }) {
   return (
     <div className="mb-4">
-      <div className="aspect-video w-[100%] mb-2">
+      <div className="aspect-video w-[100%] mb-1">
         <img src={imgUrl} className="w-[100%] h-[100%]" alt="Blog image" />
       </div>
       <div className="mb-2">
-        <div className="label-2 opacity-70 text-darkblue">
+        <Typography variant="caption" className="opacity-70 text-darkblue">
           {new Date(date).toDateString()}
-        </div>
+        </Typography>
       </div>
 
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" sx={{ fontSize: "1.15rem" }}>
         {title}
       </Typography>
       <div className="mb-2">
-        <div className="body-1 opacity-70"> {content} </div>
+        <Typography variant="body2" sx={{ opacity: "0.7" }}>
+          {content}
+        </Typography>
       </div>
       <div className="my-2">
         <div className="flex items-center">
-          <Link href={"/"}>
-            <div className="label-2 mr-3 cursor-pointer hover:underline text-darkblue">
+          <Link href={"/"} passHref>
+            <Typography
+              variant="subtitle2"
+              className="mr-3 cursor-pointer hover:underline text-darkblue"
+            >
               Read More
-            </div>
+            </Typography>
           </Link>
           <div>
             <ArrowRight />

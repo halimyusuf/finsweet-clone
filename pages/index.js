@@ -212,7 +212,12 @@ export default function Home() {
         <div className="px-3 container py-10 mx-auto">
           <div>
             <div className="label-2 text-center mb-2">Features</div>
-            <div className="h3 mx-auto text-center w-max-[80%]">
+            <div className="hidden md:block h3 mx-auto text-center">
+              <div> Design that solves </div>
+              <div>problems, one product at</div>
+              <div>a time </div>
+            </div>
+            <div className="md:hidden block h6 mx-auto text-center font-[700]">
               <div> Design that solves </div>
               <div>problems, one product at</div>
               <div>a time </div>
@@ -255,11 +260,13 @@ export default function Home() {
       </div>
       {/* sect 6 */}
       <div>
-        <div className="py-14">{/* <Faq /> */}</div>
+        <div className="py-14 px-3">
+          <Faq />
+        </div>
       </div>
 
       <div>
-        <div className="container mx-auto pt-14">
+        <div className="container mx-auto">
           <SendEnquiry />
         </div>
       </div>
@@ -342,8 +349,12 @@ function SectCard({ title, label, Icon }) {
         <div className="mb-4">
           <Icon className="h-[35px] w-[30px] text-blue" />
         </div>
-        <div className="h6 mb-2 text-darkblue">{title}</div>
-        <div className="body-1 text-darkblue opacity-70">{label}</div>
+        <Typography variant="h6" className="mb-2 text-darkblue">
+          {title}
+        </Typography>
+        <Typography variant="subtitle1" className="text-darkblue opacity-70">
+          {label}
+        </Typography>
       </CardContent>
     </Card>
   );

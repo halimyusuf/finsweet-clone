@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import { Typography } from "@mui/material";
 import Image from "next/image";
 import ArrowRight from "../icons/ArrowRight";
 
 function SendEnquiry() {
   return (
     <div>
-      <div className="md:grid grid-cols-1 md:grid-cols-2">
+      <div className="md:grid grid-cols-1 md:grid-cols-2 text-white">
         <div className="aspect-video md:aspect-auto h-full md:max-h-[100%] relative">
           <div className="absolute z-5 left-0 right-0 top-0 bottom-0">
             <img
@@ -19,26 +20,28 @@ function SendEnquiry() {
             style={{ background: "rgba(28, 30, 83, 0.5)" }}
           ></div>
           <div className="relative z-20 py-10 px-3 md:px-10">
-            <div className="hidden lg:block h2 text-white mb-3">
+            <div className="hidden lg:block h2 mb-3">
               Building stellar websites for early startups
             </div>
-            <div className="lg:hidden h3 text-white mb-3">
+            <div className="lg:hidden h3 mb-3">
               Building stellar websites for early startups
             </div>
-            <div className="body-2 text-white">
+
+            <Typography variant="subtitle1">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua ut
               enim.
-            </div>
+            </Typography>
           </div>
         </div>
         <div>
           <div className="bg-tintblue py-10 px-4 md:px-14 text-white">
             <div className="h5">Send inquiry</div>
-            <div className="label-2 mt-4">
+
+            <Typography variant="subtitle1" className="mt-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore.
-            </div>
+            </Typography>
             <div className="w-[450px] max-w-[100%]">
               <div className="input-outlined mt-5">
                 <input placeholder="Name" />
@@ -56,7 +59,9 @@ function SendEnquiry() {
 
             <div className="mt-7 text-center">
               <div className="flex justify-center items-center cursor-pointer hover:underline">
-                <div className="mr-2 label-1">Get in touch with us</div>
+                <Typography variant="subtitle2" className="mr-2">
+                  Get in touch with us
+                </Typography>
                 <div>
                   <ArrowRight />
                 </div>

@@ -174,28 +174,22 @@ export const HomeBlog = [
   {
     id: 1,
     image_url: "/home/pexels-andrea-piacquadio-3766189.jpg",
-    title:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-    content:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa",
     date: Date.now(),
   },
   {
     id: 2,
     image_url: "/home/pexels-lara-jameson-9623794.jpg",
-    title:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-    content:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa",
     date: Date.now(),
   },
   {
     id: 3,
     image_url: "/home/pexels-tranmautritam-326518.jpg",
-    title:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-    content:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    title: "Lorem ipsum dolor sit amet, consectetur",
+    content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa",
     date: Date.now(),
   },
 ];
