@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div>
       <div className="bg-tintblue text-white pb-20">
-        <div className="px-3 container mx-auto md:grid grid-cols-2  gap-4 pt-8 md:pt-14">
+        <div className="px-3 container mx-auto md:grid grid-cols-2 gap-4 pt-8 md:pt-14">
           {/* column 1 */}
           <div>
             <Typography
