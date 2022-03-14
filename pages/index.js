@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div>
       <div className="bg-tintblue text-white pb-20">
-        <div className="px-3 container mx-auto grid grid-cols-1 md:grid-cols-2  gap-4 pt-8 md:pt-14">
+        <div className="px-3 container mx-auto md:grid grid-cols-2  gap-4 pt-8 md:pt-14">
           {/* column 1 */}
           <div>
             <Typography
@@ -86,7 +86,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className=" absolute aspect-video w-[40%] glass-bg-3 bottom-[10%] right-[-10%] rounded-md px-3 py-3">
+              <div className="absolute aspect-video w-[40%] glass-bg-3 bottom-[10%] right-[-10%] rounded-md px-3 py-3">
                 <div className="h-[100%]">
                   {gradientBox2.map((gr, i) => (
                     <GradientLine2 key={gr[0] + i} grds={gr} />
