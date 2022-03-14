@@ -37,7 +37,7 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#1C1E53" }}>
+    <AppBar position="static" sx={{ backgroundColor: "#1C1E53" }} elevation={0}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>
@@ -61,7 +61,7 @@ function Navbar() {
             sx={{ display: { xs: "none", md: "flex", alignItems: "center" } }}
           >
             {navItems.map((page) => (
-              <Link href="/" key={page.label} passHref>
+              <Link href={page.route} key={page.label} passHref>
                 <Typography
                   variant="body1"
                   gutterBottom

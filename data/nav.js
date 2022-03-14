@@ -9,18 +9,18 @@ export const navItems = [
   },
   {
     label: "Features",
-    route: "/features",
+    route: "/",
   },
   {
     label: "Pricing",
-    route: "/pricing",
+    route: "/",
   },
   {
     label: "FAQ",
-    route: "/faq",
+    route: "/",
   },
   {
     label: "Blog",
-    route: "/blog",
+    route: "/",
   },
 ];
