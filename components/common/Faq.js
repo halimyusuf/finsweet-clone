@@ -1,7 +1,9 @@
 import { faqs } from "../../data/faq";
-import { Close } from "@mui/icons-material";
-import { Typography } from "@mui/material";
+import { Close, Add } from "@mui/icons-material";
+import { IconButton, Typography } from "@mui/material";
+import { useState } from "react";
 function Faq() {
+  const [currentFaq, setCurrentFaq] = useState(null);
   return (
     <div>
       <div className="container mx-auto">
@@ -23,28 +25,34 @@ function Faq() {
                     >
                       {item.count}
                     </Typography>
-                    {/* <div className="h6 text-darkblue mr-5">
-                      <div className="mb-2"> {item.title} </div>
-                      {i === 0 && (
-                        <div className="opacity-80 label-1">{item.label}</div>
-                      )}
-                    </div> */}
                     <Typography
                       variant="h6"
                       sx={{ color: "var(--darkblue)", marginRight: "1.25rem" }}
                     >
                       <div className="mb-2"> {item.title} </div>
-                      {i === 0 && (
-                        // <div className="opacity-80 label-1">{item.label}</div>
+                      {currentFaq === i && (
                         <Typography variant="subtitle1" sx={{ opacity: "0.8" }}>
                           {item.label}
                         </Typography>
                       )}
                     </Typography>
                   </div>
-                  <div>
-                    <Close />
-                  </div>
+                  {currentFaq === i ? (
+                    <div>
+                      <IconButton
+                        onClick={() => setCurrentFaq(null)}
+                        size="small"
+                      >
+                        <Close />
+                      </IconButton>
+                    </div>
+                  ) : (
+                    <div>
+                      <IconButton onClick={() => setCurrentFaq(i)} size="small">
+                        <Add />
+                      </IconButton>
+                    </div>
+                  )}
                 </div>
 
                 {i !== faqs.length - 1 && <hr />}
