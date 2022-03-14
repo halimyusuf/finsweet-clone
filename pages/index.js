@@ -165,7 +165,7 @@ export default function Home() {
       {/* sect 3 */}
 
       <div>
-        <div className="px-3 container mx-auto py-10">
+        <div className="px-3 container mx-auto py-10 max-w-[100%]">
           <div className="flex justify-between items-center">
             <div className="h3 md:h2">View our projects</div>
             <div className="hidden md:flex items-center">
@@ -182,7 +182,7 @@ export default function Home() {
 
           <div className="mt-10">
             <div className="grid grid-rows-2 grid-cols-3 gap-4">
-              <div className="col-span-2 row-span-2 aspect-video">
+              <div className="col-span-2 row-span-2 aspect-video max-w-[100%]">
                 <Image
                   src={"/home/Card.svg"}
                   width="843"
@@ -190,7 +190,7 @@ export default function Home() {
                   alt="card"
                 />
               </div>
-              <div className="col-span-1 row-span-1 aspect-video">
+              <div className="col-span-1 row-span-1 aspect-video max-w-[100%]">
                 <Image
                   src={"/home/Card-3.svg"}
                   width="843"
@@ -198,7 +198,7 @@ export default function Home() {
                   alt="card"
                 />
               </div>
-              <div className="col-span-1 row-span-1 aspect-video">
+              <div className="col-span-1 row-span-1 aspect-video max-w-[100%]">
                 <Image
                   src={"/home/Card-2.svg"}
                   width="843"
