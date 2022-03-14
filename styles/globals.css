@@ -10,6 +10,16 @@
   /* color: #000000; */
 }
 
+:root {
+  --blue: #2405f2;
+  --transparent: transparent;
+  --darkblue: #282938;
+  --grey: #f4f6fc;
+  --tintblue: #1c1e53;
+  --yellow: #fcd980;
+  --lightyellow: #fde4a6;
+}
+
 body {
   max-width: 100vw;
   width: 100vw;
