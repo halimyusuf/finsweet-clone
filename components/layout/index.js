@@ -3,10 +3,14 @@ import Navbar from "./Navbar";
 
 function Layout({ children }) {
   return (
-    <div>
-      <Navbar />
-      {children}
-      <Footer />
+    <div className="site-cont">
+      <div>
+        <Navbar />
+      </div>
+      <div className="site-content">{children}</div>
+      <div className="site-footer">
+        <Footer />
+      </div>
     </div>
   );
 }

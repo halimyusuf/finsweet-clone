@@ -20,6 +20,11 @@
   --lightyellow: #fde4a6;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   max-width: 100vw;
   min-width: 100vw;
@@ -30,6 +35,20 @@ body {
   font-family: "Manrope", sans-serif;
   font-family: "Open Sans", sans-serif; */
   font-weight: 400;
+}
+
+.site-cont {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex: 1 0 auto;
+}
+
+.site-footer {
+  flex-shrink: 0;
 }
 
 .h1 {

@@ -31,16 +31,16 @@ function Footer() {
 
             <div className="mt-4 flex">
               <div className="mr-3">
-                <Facebook color="white" />
+                <Facebook sx={{ color: "lightgrey" }} />
               </div>
               <div className="mr-3">
-                <Instagram color="white" />
+                <Instagram sx={{ color: "lightgrey" }} />
               </div>
               <div className="mr-3">
-                <Twitter color="white" />
+                <Twitter sx={{ color: "lightgrey" }} />
               </div>
               <div className="mr-3">
-                <LinkedIn color="white" />
+                <LinkedIn sx={{ color: "lightgrey" }} />
               </div>
             </div>
           </div>
