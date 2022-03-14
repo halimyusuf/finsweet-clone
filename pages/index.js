@@ -52,7 +52,7 @@ export default function Home() {
           {/* column 2 */}
           <div>
             <div className="aspect-video w-[80%] mx-auto glass-bg-1 rounded-lg relative py-3">
-              <div className="px-6 mx-auto h-[100%]">
+              <div className="px-6 mx-auto min-h-[100%] h-[100%]">
                 <div className="glass-bg-4 w-full h-[18%] max-h-[33px] rounded-full px-4">
                   <div className="flex h-[100%] items-center">
                     {dotC.map((dot) => (
@@ -61,6 +61,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {/* image */}
               <div className="absolute aspect-video w-[40%] glass-bg-2 top-[25%] left-[-10%] rounded-md">
                 <div className="grid grid-cols-2 gap-4 py-6 px-3 h-[100%]">
                   <div className="px-3 py-3 glass-bg-5 h-[100%] w-[100%] rounded-md flex items-end">
@@ -86,8 +88,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {/* gradient lines */}
               <div className="absolute aspect-video w-[40%] glass-bg-3 bottom-[10%] right-[-10%] rounded-md px-3 py-3">
-                <div className="h-[100%]">
+                <div className="min-h-[100%] h-[100%]">
                   {gradientBox2.map((gr, i) => (
                     <GradientLine2 key={gr[0] + i} grds={gr} />
                   ))}
