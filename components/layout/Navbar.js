@@ -62,21 +62,31 @@ function Navbar() {
           >
             {navItems.map((page) => (
               <Link href="/" key={page.label} passHref>
-                <Typography variant="body1" gutterBottom>
-                  <div className="mr-4 text-[#bbbbcb] cursor-pointer hover:text-white">
-                    {page.label}
-                  </div>
+                <Typography
+                  variant="body1"
+                  gutterBottom
+                  sx={{
+                    marginRight: "1rem",
+                    color: "#bbbbcb",
+                    cursor: "pointer",
+                    "&:hover": { color: "white" },
+                  }}
+                >
+                  {page.label}
                 </Typography>
               </Link>
             ))}
             <div className="ml-2">
               <Button
                 size="large"
-                className="text-white capitalize border border-slate-300 hover:border-slate-400"
                 variant="outlined"
                 sx={{
+                  color: "white",
                   borderRadius: "999px",
                   border: "1px solid rgba(187, 187, 203, 0.4)",
+                  textTransform: "capitalize",
+                  // border: "1px solid rgb(203 213 225)",
+                  "&:hover": { border: "1px solid rgb(203 213 225)" },
                 }}
               >
                 <Typography variant="body2">Contact Us</Typography>
