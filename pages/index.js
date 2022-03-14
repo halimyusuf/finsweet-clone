@@ -99,11 +99,11 @@ export default function Home() {
             <Button
               size="large"
               sx={{
-                background: "var(--yellow)",
+                background: "var(--yellow) !important",
                 color: "black",
                 marginRight: "2rem",
                 borderRadius: "999px",
-                padding: "0px 2.5rem",
+                padding: "0.5rem 2.5rem",
                 "&:hover": { background: "var(--lightyellow)" },
               }}
             >
