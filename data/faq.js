@@ -5,7 +5,12 @@ export const faqs = [
     label:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
-  { count: "02", title: "What is your class naming convention?", label: "" },
+  {
+    count: "02",
+    title: "What is your class naming convention?",
+    label:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
   {
     count: "03",
     title: "How do you communicate?",
