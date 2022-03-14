@@ -98,7 +98,14 @@ export default function Home() {
           <div className="block mx-auto items-center text-center md:hidden mt-6 justify-center">
             <Button
               size="large"
-              className="bg-yellow text-black mr-8 hover:bg-lightyellow rounded-[999px] px-10"
+              sx={{
+                background: "var(--yellow)",
+                color: "black",
+                marginRight: "2rem",
+                borderRadius: "999px",
+                padding: "0px 2.5rem",
+                "&:hover": { background: "var(--lightyellow)" },
+              }}
             >
               <Typography variant="body-2 capitalize">View our work</Typography>
             </Button>
@@ -122,10 +129,13 @@ export default function Home() {
                   do eiusmod tempor.
                 </div>
                 <div className="text-blue my-2 flex items-center cursor-pointer hover:underline">
-                  <div className="text-blue mr-2 label-1">
+                  <Typography
+                    variant="body-1"
+                    sx={{ color: "var(--blue)", marginRight: "0.5rem" }}
+                  >
                     Get in touch with us
-                  </div>
-                  <div className="">
+                  </Typography>
+                  <div className="body-1">
                     <ArrowRight />
                   </div>
                 </div>
@@ -242,7 +252,7 @@ export default function Home() {
         <div className="px-3 container mx-auto py-14">
           <div className="grid md:grid-cols-3 gap-6 md:gap-12">
             <div className="md:col-span-1">
-              <div className="h3 mb-4">What our clients say about us</div>
+              <div className="h3 mb-0">What our clients say about us</div>
               {/* <div className="label-1 text-blue cursor-pointer hover:opacity-70">
                 Contact us for more info
               </div> */}
@@ -328,7 +338,7 @@ function GradientLine2({ grds }) {
 
 function HowWeWorkCont({ number, desc, label }) {
   return (
-    <div className="mr-3 mt-5 md:ml-3 md:mt-0 max-w-[100%]">
+    <div className="mr-3 pb-5 mt-5 md:ml-3 md:mt-0 max-w-[100%]">
       <div className={`${classes["item-count-cont"]} mb-3`}>
         <div className={`${classes["item-count-cont-inner"]}`}></div>
         <div className={`${classes["item-count-cont-inner1"]}`}></div>
@@ -364,7 +374,10 @@ function Reviews({ text, name, src, work }) {
   return (
     <div>
       {/* <div className="h6 text-darkblue mb-10"></div> */}
-      <Typography variant="h6" className="text-darkblue mb-4">
+      <Typography
+        variant="h6"
+        sx={{ marginBottom: "1.5rem", color: "var(--darkblue)" }}
+      >
         {text}
       </Typography>
       <div className="flex">

@@ -17,7 +17,10 @@ function Faq() {
               <div key={item.title}>
                 <div className="flex justify-between py-5">
                   <div className="flex">
-                    <Typography variant="h6" className="text-blue mr-5">
+                    <Typography
+                      variant="h6"
+                      sx={{ color: "var(--blue)", marginRight: "1.25rem" }}
+                    >
                       {item.count}
                     </Typography>
                     {/* <div className="h6 text-darkblue mr-5">
@@ -26,11 +29,14 @@ function Faq() {
                         <div className="opacity-80 label-1">{item.label}</div>
                       )}
                     </div> */}
-                    <Typography variant="h6" className="text-darkblue mr-5">
+                    <Typography
+                      variant="h6"
+                      sx={{ color: "var(--darkblue)", marginRight: "1.25rem" }}
+                    >
                       <div className="mb-2"> {item.title} </div>
                       {i === 0 && (
                         // <div className="opacity-80 label-1">{item.label}</div>
-                        <Typography variant="subtitle1" className="opacity-80">
+                        <Typography variant="subtitle1" sx={{ opacity: "0.8" }}>
                           {item.label}
                         </Typography>
                       )}

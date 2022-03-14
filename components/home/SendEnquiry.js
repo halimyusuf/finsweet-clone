@@ -42,7 +42,7 @@ function SendEnquiry() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore.
             </Typography>
-            <div className="w-[450px] max-w-[100%]">
+            <div className="w-[450px] max-w-[100%] mx-auto">
               <div className="input-outlined mt-5">
                 <input placeholder="Name" />
               </div>
