@@ -6,7 +6,7 @@ export default function ComapnySupport() {
   return (
     <div>
       <div className="px-3 grid grid-cols-3 lg:grid-cols-6 gap-4 place-content-center">
-        <div className="px-1">
+        <div className="text-center">
           <div>
             <Typography
               variant="h4"
@@ -39,7 +39,7 @@ export default function ComapnySupport() {
           </div>
         </div>
 
-        <div className="">
+        <div className="text-center">
           <Image
             width="130"
             height="60"
@@ -48,7 +48,7 @@ export default function ComapnySupport() {
           />
         </div>
 
-        <div>
+        <div className="text-center">
           <Image
             width="130"
             height="60"
@@ -57,7 +57,7 @@ export default function ComapnySupport() {
           />
         </div>
 
-        <div>
+        <div className="text-center">
           <Image
             width="130"
             height="60"
@@ -66,7 +66,7 @@ export default function ComapnySupport() {
           />
         </div>
 
-        <div>
+        <div className="text-center">
           <Image
             width="130"
             height="60"
@@ -75,7 +75,7 @@ export default function ComapnySupport() {
           />
         </div>
 
-        <div>
+        <div className="text-center">
           <Image
             width="130"
             height="60"

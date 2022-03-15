@@ -5,7 +5,7 @@ export default function SectDescCard({ title, label, Icon, bg = "white" }) {
     <Card
       elevation={0}
       sx={{
-        marginX: "7px",
+        marginX: "10px",
         backgroundColor: bg === "white" ? bg : `var(--${bg})`,
         padding: "1rem 0.5rem",
       }}
