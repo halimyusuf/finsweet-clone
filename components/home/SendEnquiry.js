@@ -9,9 +9,11 @@ function SendEnquiry() {
       <div className="md:grid grid-cols-1 md:grid-cols-2 text-white">
         <div className="aspect-video md:aspect-auto h-full md:max-h-[100%] relative">
           <div className="absolute z-5 left-0 right-0 top-0 bottom-0">
-            <img
-              src="/enquiry/woman-writing-on-paper.jpg"
+            <Image
+              src="https://i.postimg.cc/9M54KPWv/woman-writing-on-paper.jpg"
               className="h-full w-full"
+              layout="fill"
+              objectFit="cover"
               alt="enquiry"
             />
           </div>

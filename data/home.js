@@ -164,7 +164,7 @@ export const reviews = [
   {
     text: "The best agency we’ve worked with so far. They understand our product and are able to add new features with a great focus.",
     name: "Jenny Wilson",
-    src: "/home/woman-in-collared-shirt.png",
+    src: "/home/woman-in-collared-shirt.jpg",
     work: "Dev at google",
     // https://www.pexels.com/photo/woman-in-collared-shirt-774909/
   },
@@ -173,21 +173,22 @@ export const reviews = [
 export const HomeBlog = [
   {
     id: 1,
-    image_url: "/home/pexels-andrea-piacquadio-3766189.jpg",
+    image_url:
+      "https://i.postimg.cc/1RkcG6hV/pexels-andrea-piacquadio-3766189.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur",
     content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa",
     date: Date.now(),
   },
   {
     id: 2,
-    image_url: "/home/pexels-lara-jameson-9623794.jpg",
+    image_url: "https://i.postimg.cc/HkHwKgLp/pexels-lara-jameson-9623794.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur",
     content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa",
     date: Date.now(),
   },
   {
     id: 3,
-    image_url: "/home/pexels-tranmautritam-326518.jpg",
+    image_url: "https://i.postimg.cc/KzdL5XVh/pexels-tranmautritam-326518.jpg",
     title: "Lorem ipsum dolor sit amet, consectetur",
     content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa",
     date: Date.now(),

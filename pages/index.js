@@ -169,7 +169,7 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <div className="h3 md:h2">View our projects</div>
             <div className="hidden md:flex items-center">
-              <Link href={"/"}>
+              <Link href={"/"} passHref>
                 <div className="label-2 mr-3 cursor-pointer hover:underline">
                   View More
                 </div>
@@ -181,26 +181,26 @@ export default function Home() {
           </div>
 
           <div className="mt-10">
-            <div className="grid grid-rows-2 grid-cols-3 gap-4">
-              <div className="col-span-2 row-span-2 aspect-video max-w-[100%]">
+            <div className="md:grid grid-rows-2 grid-cols-3 gap-4">
+              <div className="col-span-2 row-span-2 aspect-video max-w-[100%] my-2 md:my-0">
                 <Image
-                  src={"/home/Card.svg"}
+                  src="https://i.postimg.cc/SsTb37c1/Card.jpg"
                   width="843"
                   height="600"
                   alt="card"
                 />
               </div>
-              <div className="col-span-1 row-span-1 aspect-video max-w-[100%]">
+              <div className="col-span-1 row-span-1 aspect-video max-w-[100%] my-2 md:my-0">
                 <Image
-                  src={"/home/Card-3.svg"}
+                  src="https://i.postimg.cc/L676nRYQ/Card-2.jpg"
                   width="843"
                   height="600"
                   alt="card"
                 />
               </div>
-              <div className="col-span-1 row-span-1 aspect-video max-w-[100%]">
+              <div className="col-span-1 row-span-1 aspect-video max-w-[100%] my-2 md:my-0">
                 <Image
-                  src={"/home/Card-2.svg"}
+                  src="https://i.postimg.cc/yYJ7q5Qm/Card-3.jpg"
                   width="843"
                   height="600"
                   alt="card"
@@ -209,7 +209,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex md:hidden items-center">
-            <Link href={"/"}>
+            <Link href={"/"} passHref>
               <div className="label-2 mr-3 cursor-pointer hover:underline">
                 View More
               </div>
