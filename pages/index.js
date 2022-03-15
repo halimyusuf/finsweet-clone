@@ -14,6 +14,7 @@ import classes from "../styles/Home.module.css";
 import Faq from "../components/common/Faq";
 import SendEnquiry from "../components/home/SendEnquiry";
 import BlogList from "../components/common/BlogList";
+import SectDescCard from "../components/common/SectDescCard";
 import { Button, Card, CardContent, Typography } from "@mui/material";
 
 export default function Home() {
@@ -240,7 +241,7 @@ export default function Home() {
           <div className="mt-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {sect4Cards.map((item) => (
-                <SectCard
+                <SectDescCard
                   key={item.title}
                   title={item.title}
                   label={item.label}
@@ -353,24 +354,6 @@ function HowWeWorkCont({ number, desc, label }) {
       <div className="h6 md:h5 text-darkblue">{desc}</div>
       <div className="body-1 text-darkblue opacity-70">{label}</div>
     </div>
-  );
-}
-
-function SectCard({ title, label, Icon }) {
-  return (
-    <Card className="bg-white">
-      <CardContent>
-        <div className="mb-4">
-          <Icon className="h-[35px] w-[30px] text-blue" />
-        </div>
-        <Typography variant="h6" className="mb-2 text-darkblue">
-          {title}
-        </Typography>
-        <Typography variant="subtitle1" className="text-darkblue opacity-70">
-          {label}
-        </Typography>
-      </CardContent>
-    </Card>
   );
 }
 

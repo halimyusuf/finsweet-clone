@@ -1,10 +1,10 @@
 import {
-  UsersIcon,
   CheckCircleIcon,
   PencilAltIcon,
   QuestionMarkCircleIcon,
   ClockIcon,
   DocumentTextIcon,
+  UserGroupIcon,
 } from "@heroicons/react/solid";
 
 export const gradientBox1 = [
@@ -126,7 +126,7 @@ export const sect4Cards = [
     title: "Uses Client First",
     label:
       "Euismod faucibus turpis eu gravida mi. Pellentesque et velit aliquam sed faucib turpis eu gravida mi. Pellentesque et velit aliquam sed mi. ",
-    icon: UsersIcon,
+    icon: UserGroupIcon,
   },
   {
     title: "Two Free Revision Round",

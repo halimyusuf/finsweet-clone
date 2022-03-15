@@ -173,9 +173,9 @@ body {
   background: rgba(255, 255, 255, 0.17);
 }
 
-svg path {
-  stroke-width: 1;
-}
+/* svg path {
+  stroke-width: 1 !important;
+} */
 
 .cap-2 {
   font-weight: 500;

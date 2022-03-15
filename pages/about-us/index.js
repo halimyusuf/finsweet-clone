@@ -1,5 +1,9 @@
 import { Typography } from "@mui/material";
 import Image from "next/image";
+import OurTeam from "../../components/about-us/OurTeam";
+import ComapnySupport from "../../components/common/CompanySupports";
+import SectDescCard from "../../components/common/SectDescCard";
+import { benefitsOfWorking } from "../../data/about-us";
 
 export default function AboutUs() {
   return (
@@ -36,7 +40,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="aspect-[5/3] w-[100%] mt-7 md:mt-0">
-            <div className="w-[100%] h-[100%] relative">
+            <div className="w-[100%] h-[100%] md:w-[80%] md:h-[80%] relative float-right">
               <Image
                 src="https://i.postimg.cc/QC1y3Vq7/pexels-fauxels-3184360.jpg"
                 layout="fill"
@@ -134,6 +138,166 @@ export default function AboutUs() {
               The process we follow
             </Typography>
           </div>
+        </div>
+      </div>
+
+      <div>
+        <div className="bg-[#EEF4FA] my-14">
+          <div className="container py-16 mx-auto">
+            <div className="md:grid grid-cols-2 gaps-8 mb-14">
+              <div className="px-3">
+                <div className="mb-2">
+                  <Typography
+                    variant="subtitle2"
+                    sx={{ color: "var(--darkblue)" }}
+                  >
+                    Our Mission
+                  </Typography>
+                </div>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: "600",
+                    display: { xs: "block", lg: "none" },
+                  }}
+                >
+                  Inspire, Innovate, Share
+                </Typography>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontWeight: "600",
+                    display: { xs: "none", lg: "block" },
+                  }}
+                >
+                  Inspire, Innovate, Share
+                </Typography>
+                <div className="mt-4">
+                  <Typography
+                    variant="body1"
+                    sx={{ color: "var(--darkblue)", opacity: "0.7" }}
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </Typography>
+                </div>
+              </div>
+              <div className="aspect-[5/3] w-[100%] mt-7 md:mt-0">
+                <div className="w-[100%] h-[100%] md:w-[80%] md:h-[80%] relative md:float-right">
+                  <Image
+                    src="https://i.postimg.cc/t4BMkCyp/pexels-yan-krukov-7792811.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                    alt="About Us"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="md:grid grid-cols-2 gaps-8">
+              <div className="hidden md:block aspect-[5/3] w-[100%] mt-7 md:mt-0">
+                <div className="w-[100%] h-[100%] md:w-[80%] md:h-[80%] relative">
+                  <Image
+                    src="https://i.postimg.cc/d3Gfj2Qx/pexels-rodnae-productions-7490892.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                    alt="About Us"
+                  />
+                </div>
+              </div>
+              <div className="px-3">
+                <div className="mb-2">
+                  <Typography
+                    variant="subtitle2"
+                    sx={{ color: "var(--darkblue)" }}
+                  >
+                    Our Vision
+                  </Typography>
+                </div>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: "600",
+                    display: { xs: "block", lg: "none" },
+                  }}
+                >
+                  Laser focus
+                </Typography>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    fontWeight: "600",
+                    display: { xs: "none", lg: "block" },
+                  }}
+                >
+                  Laser focus
+                </Typography>
+                <div className="mt-4">
+                  <Typography
+                    variant="body1"
+                    sx={{ color: "var(--darkblue)", opacity: "0.7" }}
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </Typography>
+                </div>
+              </div>
+              <div className="block md:hidden aspect-[5/3] w-[100%] mt-7 md:mt-0">
+                <div className="w-[100%] h-[100%] md:w-[80%] md:h-[80%] relative">
+                  <Image
+                    src="https://i.postimg.cc/d3Gfj2Qx/pexels-rodnae-productions-7490892.jpg"
+                    layout="fill"
+                    objectFit="cover"
+                    alt="About Us"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className="container mx-auto my-14">
+          <div className="text-center mb-10">
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: 600, display: { xs: "none", md: "block" } }}
+            >
+              The benefits of working with us
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: 600, display: { xs: "block", md: "none" } }}
+            >
+              The benefits of working <br /> with us
+            </Typography>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefitsOfWorking.map((item) => (
+              <SectDescCard
+                bg="grey"
+                key={item.title}
+                title={item.title}
+                label={item.label}
+                Icon={item.icon}
+              />
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <ComapnySupport />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className="bg-grey py-14">
+          <OurTeam />
         </div>
       </div>
     </div>
