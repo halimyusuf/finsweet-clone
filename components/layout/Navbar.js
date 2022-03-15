@@ -63,7 +63,7 @@ function Navbar() {
             {navItems.map((page) => (
               <Link href={page.route} key={page.label} passHref>
                 <Typography
-                  variant="body1"
+                  variant="subtitle1"
                   gutterBottom
                   sx={{
                     marginRight: "1rem",

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ComapnySupport() {
   return (
     <div>
-      <div className="px-3 grid grid-cols-3 lg:grid-cols-6 gap-4">
+      <div className="px-3 grid grid-cols-3 lg:grid-cols-6 gap-4 place-content-center">
         <div className="px-1">
           <div>
             <Typography
