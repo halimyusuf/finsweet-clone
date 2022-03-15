@@ -12,7 +12,7 @@ export default function AboutUs() {
         <div className="md:grid grid-cols-2 gaps-8">
           <div className="px-3">
             <div className="mb-2">
-              <Typography variant="subtitle1" sx={{ color: "var(--darkblue)" }}>
+              <Typography variant="subtitle2" sx={{ color: "var(--darkblue)" }}>
                 About Us
               </Typography>
             </div>
