@@ -3,9 +3,12 @@ import { Card, CardContent, Typography } from "@mui/material";
 export default function SectDescCard({ title, label, Icon, bg = "white" }) {
   return (
     <Card
-      className={`bg-${bg} px-2 py-4`}
       elevation={0}
-      sx={{ marginX: "7px" }}
+      sx={{
+        marginX: "7px",
+        backgroundColor: bg === "white" ? bg : `var(--${bg})`,
+        padding: "1rem 0.5rem",
+      }}
     >
       <CardContent>
         <div className="mb-2">

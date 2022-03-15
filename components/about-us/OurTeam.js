@@ -24,10 +24,15 @@ export default function OurTeam() {
         <div className="mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 place-content-center">
             {ourTeamData.map((ot) => (
-              <div className="" key={ot.name}>
-                <Card elevation={0} sx={{ marginX: "7px" }}>
-                  <CardContent>
-                    <div className="rounded-full relative w-[150px] h-[150px] overflow-hidden mx-auto">
+              <div className="mx-auto" key={ot.name}>
+                <Card
+                  elevation={0}
+                  sx={{
+                    marginX: "7px",
+                  }}
+                >
+                  <CardContent sx={{ paddingX: "3rem", textAlign: "center" }}>
+                    <div className="rounded-full relative w-[150px] h-[150px] overflow-hidden text-center">
                       <Image
                         src={ot.imgUrl}
                         layout="fill"
