@@ -32,10 +32,15 @@ export default function Pricing() {
               Our Pricing Plans
             </Typography>
           </div>
-          <div className="w-[420px] mx-auto">
+          <div className="w-[420px] mx-auto max-w-[95%]">
             <Typography
               variant="subtitle2"
-              sx={{ opacity: "0.7", color: "var(--darkblue)", fontWeight: 500 }}
+              sx={{
+                opacity: "0.7",
+                color: "var(--darkblue)",
+                fontWeight: 500,
+                wordWrap: "wrap",
+              }}
             >
               {`When you're ready to go beyond prototyping in Figma, Webflow is
               ready to help you bring your designs to life — without coding
@@ -57,7 +62,7 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div className="my-20">
+        <div className="my-20 px-4 md:px-0">
           <Faq />
         </div>
       </div>
@@ -77,10 +82,12 @@ function Plan({ planData, active, onHover }) {
     <Card
       sx={{
         backgroundColor: `var(--${colorModes.accent1})`,
-        padding: "2rem 1rem 3rem 1rem",
+        padding: "2rem 1rem 4rem 1rem",
         position: "relative",
         width: "350px",
         maxWidth: "90%",
+        margin: "auto",
+        height: "100%",
       }}
       elevation={0}
       onMouseEnter={onHover}
@@ -140,7 +147,7 @@ function Plan({ planData, active, onHover }) {
                   }`,
                   borderRadius: "3px",
                   transform: "rotate(90deg)",
-                  "mix-blend-mode": opt.active ? "normal" : "luminosity",
+                  mixBlendMode: opt.active ? "normal" : "luminosity",
                 }}
               ></div>
               <div>
