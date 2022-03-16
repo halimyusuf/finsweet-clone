@@ -9,9 +9,25 @@ function Faq() {
       <div className="container mx-auto">
         <div className="md:flex justify-between">
           <div className="w-[330px] max-w-[100%] mr-10">
-            <div className="h3">Frequently asked questions</div>
-            <div className="label-1 text-blue cursor-pointer hover:opacity-70">
-              Contact us for more info
+            <div>
+              <Typography
+                variant="h4"
+                sx={{ fontWeight: 500, color: "var(--darkblue)" }}
+              >
+                Frequently asked questions
+              </Typography>
+            </div>
+            <div>
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  cursor: "pointer",
+                  color: "var(--blue)",
+                  "&:hover": { opacity: "0.7" },
+                }}
+              >
+                Contact us for more info
+              </Typography>
             </div>
           </div>
           <div className="w-[850px] max-w-[100%]">
