@@ -13,7 +13,7 @@ export const navItems = [
   },
   {
     label: "Pricing",
-    route: "/",
+    route: "/pricing",
   },
   {
     label: "FAQ",
