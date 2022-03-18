@@ -61,3 +61,27 @@ export const ourTeam = [
     linkedin: "www.linkedin.com",
   },
 ];
+
+export const descImage = [
+  {
+    title: "Inspire, Innovate, Share",
+    subtitle: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+    do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+    comment: "Our Mission",
+    image_url: "https://i.postimg.cc/t4BMkCyp/pexels-yan-krukov-7792811.jpg",
+    imgRight: true,
+  },
+  {
+    title: "Laser focus",
+    subtitle: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+    do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+    ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+    comment: "Our Vision",
+    image_url:
+      "https://i.postimg.cc/d3Gfj2Qx/pexels-rodnae-productions-7490892.jpg",
+    imgRight: false,
+  },
+];
