@@ -325,7 +325,7 @@ function GradientLine({ gr }) {
 
 function GradientLine2({ grds }) {
   return (
-    <div className="flex w-[100%] mb-[5%] h-[7%]">
+    <div className="flex w-[100%] mb-[6%] h-[8%]">
       {grds.map((gr) => (
         <div
           key={gr.line}
