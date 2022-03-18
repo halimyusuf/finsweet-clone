@@ -10,7 +10,7 @@ export default function DescAndImage({
 }) {
   return (
     <div>
-      <div className="md:grid grid-cols-2 gaps-8">
+      <div className="md:grid md:grid-cols-2 gaps-8">
         {!imgRight && (
           <div className="hidden md:block aspect-[5/3] w-[100%] mt-7 md:mt-0">
             <div className="w-[100%] h-[100%] md:w-[80%] md:h-[80%] relative">

@@ -9,7 +9,7 @@ export const navItems = [
   },
   {
     label: "Features",
-    route: "/",
+    route: "/features",
   },
   {
     label: "Pricing",
