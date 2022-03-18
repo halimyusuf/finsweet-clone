@@ -2,7 +2,7 @@
 import { Typography } from "@mui/material";
 import Image from "next/image";
 
-export default function ComapnySupport() {
+export default function ComapanySupport() {
   return (
     <div>
       <div className="px-3 grid grid-cols-3 lg:grid-cols-6 gap-4 place-content-center">

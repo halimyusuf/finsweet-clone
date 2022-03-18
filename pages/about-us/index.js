@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import Image from "next/image";
 import OurTeam from "../../components/about-us/OurTeam";
-import ComapnySupport from "../../components/common/CompanySupports";
+import ComapanySupport from "../../components/common/CompanySupports";
 import SectDescCard from "../../components/common/SectDescCard";
 import { benefitsOfWorking } from "../../data/about-us";
 
@@ -290,7 +290,7 @@ export default function AboutUs() {
           </div>
 
           <div className="mt-10">
-            <ComapnySupport />
+            <ComapanySupport />
           </div>
         </div>
       </div>
