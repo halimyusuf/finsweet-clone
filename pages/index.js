@@ -45,7 +45,9 @@ export default function Home() {
                 View our work
               </div>
               <div className="body-1 cursor-pointer hover:underline flex items-center">
-                <div className="mr-2">View Pricing</div>
+                <nuxt-link href="/pricing">
+                  <div className="mr-2">View Pricing</div>
+                </nuxt-link>
                 <ArrowRight />
               </div>
             </div>
@@ -106,7 +108,6 @@ export default function Home() {
               sx={{
                 background: "var(--yellow) !important",
                 color: "black",
-                marginRight: "2rem",
                 borderRadius: "999px",
                 padding: "0.5rem 2.5rem",
                 "&:hover": { background: "var(--lightyellow)" },
@@ -115,7 +116,9 @@ export default function Home() {
               <Typography variant="body-2 capitalize">View our work</Typography>
             </Button>
             <div className="body-1 cursor-pointer hover:underline flex items-center justify-center mt-5">
-              <div className="mr-2">View Pricing</div>
+              <nuxt-link href="/pricing">
+                <div className="mr-2">View Pricing</div>
+              </nuxt-link>
               <ArrowRight />
             </div>
           </div>
