@@ -21,7 +21,10 @@ export default function Features() {
             </Typography>
             <Typography
               variant="h3"
-              sx={{ fontWeight: "600", display: { md: "block", lg: "none" } }}
+              sx={{
+                fontWeight: "600",
+                display: { xs: "none", md: "block", lg: "none" },
+              }}
             >
               All the features <br /> you need
             </Typography>
@@ -91,13 +94,12 @@ export default function Features() {
               </div>
             </div>
           </div>
-          <div className="block mx-auto items-center text-center md:hidden mt-6 justify-center">
+          <div className="flex items-center text-center md:hidden mt-6 justify-center">
             <Button
               size="large"
               sx={{
                 background: "var(--yellow) !important",
                 color: "black",
-                marginRight: "2rem",
                 borderRadius: "999px",
                 padding: "0.5rem 2.5rem",
                 "&:hover": { background: "var(--lightyellow)" },
@@ -134,7 +136,7 @@ export default function Features() {
       </div>
 
       <div>
-        <div className="my-14">
+        <div className="my-14 px-4">
           <Faq />
         </div>
       </div>
