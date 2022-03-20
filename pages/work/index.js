@@ -132,7 +132,8 @@ export default function Work() {
               variant="h5"
               sx={{ fontWeight: 600, display: { xs: "block", md: "none" } }}
             >
-              {`Let's build something <br></br> great together`}
+              {`Let's build something`} <br></br>
+              great together
             </Typography>
           </div>
 
