@@ -44,7 +44,7 @@ function Navbar() {
 
   return (
     <AppBar
-      position="fixed"
+      position={trigger ? "fixed" : "static"}
       sx={{
         backgroundColor: trigger ? "rgba(28, 30, 83, 0.8)" : "#1C1E53",
         backdropFilter: "blur(9.9px)",
