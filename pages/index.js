@@ -221,7 +221,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex md:hidden items-center">
-            <Link href={"/"} passHref>
+            <Link href={"/work"} passHref>
               <div className="label-2 mr-3 cursor-pointer hover:underline">
                 View More
               </div>
