@@ -144,7 +144,7 @@ export default function ReadCaseStudy() {
               </Typography>
             </div>
             <div className="opacity-70 text-darkblue mt-5">
-              <ul style={{ listStyle: "initial" }}>
+              <ul style={{ listStyle: "initial" }} className="pl-5">
                 <li className="my-2">
                   <Typography variant="body1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -209,7 +209,7 @@ export default function ReadCaseStudy() {
               </Typography>
             </div>
             <div className="opacity-70 text-darkblue mt-5">
-              <ul style={{ listStyle: "initial" }}>
+              <ul style={{ listStyle: "initial" }} className="pl-5">
                 <li className="my-2">
                   <Typography variant="body1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -238,6 +238,10 @@ export default function ReadCaseStudy() {
           </div>
         </div>
       </div>
+
+      {/* <div>
+
+      </div> */}
 
       <div>
         <div className="container mx-auto my-14">
