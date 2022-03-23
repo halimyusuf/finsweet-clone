@@ -5,6 +5,7 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
+import Link from "next/link";
 import { useState } from "react";
 import Faq from "../../components/common/Faq";
 import { pricingPlans } from "../../data/pricing";
@@ -172,19 +173,21 @@ function Plan({ planData, active, onHover }) {
           >
             Get Started
           </div> */}
-        <Button
-          size="large"
-          sx={{
-            background: `var(--${colorModes.accent3}) !important`,
-            color: `var(--${colorModes.accent1})`,
-            marginRight: "2rem",
-            borderRadius: "999px",
-            padding: "0.5rem 2.5rem",
-            "&:hover": { background: "var(--lightyellow)" },
-          }}
-        >
-          <Typography variant="body-2 capitalize">Get Started</Typography>
-        </Button>
+        <Link href="/contact-us" passHref>
+          <Button
+            size="large"
+            sx={{
+              background: `var(--${colorModes.accent3}) !important`,
+              color: `var(--${colorModes.accent1})`,
+              marginRight: "2rem",
+              borderRadius: "999px",
+              padding: "0.5rem 2.5rem",
+              "&:hover": { background: "var(--lightyellow)" },
+            }}
+          >
+            <Typography variant="body-2 capitalize">Get Started</Typography>
+          </Button>
+        </Link>
       </div>
     </Card>
   );

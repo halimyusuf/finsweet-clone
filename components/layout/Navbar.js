@@ -58,10 +58,11 @@ function Navbar() {
       >
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Box sx={{ flexGrow: 1 }}>
-              <Image src="/nav/logo.svg" alt="logo" height="28" width="122" />
-            </Box>
-
+            <Link href={"/"} passHref>
+              <Box sx={{ flexGrow: 1 }}>
+                <Image src="/nav/logo.svg" alt="logo" height="28" width="122" />
+              </Box>
+            </Link>
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"

@@ -26,7 +26,7 @@ function BlogList({ image_url: imgUrl, date, title, content, id }) {
       </div>
       <div className="my-2">
         <div className="flex items-center">
-          <Link href={"/"} passHref>
+          <Link href={`/blog/${id}`} passHref>
             <Typography
               variant="subtitle2"
               className="mr-3 cursor-pointer hover:underline text-darkblue"

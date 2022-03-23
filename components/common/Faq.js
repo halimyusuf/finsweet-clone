@@ -2,6 +2,7 @@ import { faqs } from "../../data/faq";
 import { Close, Add } from "@mui/icons-material";
 import { IconButton, Typography } from "@mui/material";
 import { useState } from "react";
+import Link from "next/link";
 function Faq() {
   const [currentFaq, setCurrentFaq] = useState(null);
   return (
@@ -18,16 +19,18 @@ function Faq() {
               </Typography>
             </div>
             <div>
-              <Typography
-                variant="subtitle1"
-                sx={{
-                  cursor: "pointer",
-                  color: "var(--blue)",
-                  "&:hover": { opacity: "0.7" },
-                }}
-              >
-                Contact us for more info
-              </Typography>
+              <Link href="/contact-us" passHref>
+                <Typography
+                  variant="subtitle1"
+                  sx={{
+                    cursor: "pointer",
+                    color: "var(--blue)",
+                    "&:hover": { opacity: "0.7" },
+                  }}
+                >
+                  Contact us for more info
+                </Typography>
+              </Link>
             </div>
           </div>
           <div className="w-[850px] max-w-[100%]">

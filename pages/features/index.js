@@ -5,6 +5,7 @@ import ComapanySupport from "../../components/common/CompanySupports";
 import DescAndImage from "../../components/common/DescAndImage";
 import { descImage } from "../../data/features";
 import Faq from "../../components/common/Faq";
+import Link from "next/link";
 
 export default function Features() {
   return (
@@ -39,9 +40,11 @@ export default function Features() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
             <div className="hidden items-center md:flex">
-              <div className="btn btn-large mr-8 hover:bg-lightyellow">
-                View Pricing
-              </div>
+              <Link href="/pricing" passHref>
+                <div className="btn btn-large mr-8 hover:bg-lightyellow">
+                  View Pricing
+                </div>
+              </Link>
             </div>
           </div>
           {/* column 2 */}
@@ -95,18 +98,22 @@ export default function Features() {
             </div>
           </div>
           <div className="flex items-center text-center md:hidden mt-6 justify-center">
-            <Button
-              size="large"
-              sx={{
-                background: "var(--yellow) !important",
-                color: "black",
-                borderRadius: "999px",
-                padding: "0.5rem 2.5rem",
-                "&:hover": { background: "var(--lightyellow)" },
-              }}
-            >
-              <Typography variant="body-2 capitalize">View Pricing</Typography>
-            </Button>
+            <Link href="/pricing" passHref>
+              <Button
+                size="large"
+                sx={{
+                  background: "var(--yellow) !important",
+                  color: "black",
+                  borderRadius: "999px",
+                  padding: "0.5rem 2.5rem",
+                  "&:hover": { background: "var(--lightyellow)" },
+                }}
+              >
+                <Typography variant="body-2 capitalize">
+                  View Pricing
+                </Typography>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

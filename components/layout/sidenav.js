@@ -70,8 +70,8 @@ export default function Sidenav({ open, setOpen }) {
       <List>
         {navItems.map((page) => (
           <div className="" key={page.label}>
-            <ListItem>
-              <Link href={page.route} passHref>
+            <Link href={page.route} passHref>
+              <ListItem button>
                 <Typography
                   variant="h6"
                   gutterBottom
@@ -83,8 +83,8 @@ export default function Sidenav({ open, setOpen }) {
                 >
                   {page.label}
                 </Typography>
-              </Link>
-            </ListItem>
+              </ListItem>
+            </Link>
             <Divider />
           </div>
         ))}

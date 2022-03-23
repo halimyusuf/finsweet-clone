@@ -44,9 +44,11 @@ export default function Home() {
               eiusmod tempor incididunt.
             </div>
             <div className="hidden items-center md:flex">
-              <div className="btn btn-large mr-8 hover:bg-lightyellow">
-                View our work
-              </div>
+              <Link href="/work" passHref>
+                <div className="btn btn-large mr-8 hover:bg-lightyellow">
+                  View our work
+                </div>
+              </Link>
               <div className="body-1 cursor-pointer hover:underline flex items-center">
                 <Link href="/pricing" passHref>
                   <div className="mr-2">View Pricing</div>
@@ -120,9 +122,9 @@ export default function Home() {
               <Typography variant="body-2 capitalize">View our work</Typography>
             </Button>
             <div className="body-1 cursor-pointer hover:underline flex items-center justify-center mt-5">
-              <nuxt-link href="/pricing">
+              <Link href="/pricing" passHref>
                 <div className="mr-2">View Pricing</div>
-              </nuxt-link>
+              </Link>
               <ArrowRight />
             </div>
           </div>
@@ -141,12 +143,14 @@ export default function Home() {
                   do eiusmod tempor.
                 </div>
                 <div className="text-blue my-2 flex items-center cursor-pointer hover:underline">
-                  <Typography
-                    variant="body-1"
-                    sx={{ color: "var(--blue)", marginRight: "0.5rem" }}
-                  >
-                    Get in touch with us
-                  </Typography>
+                  <Link href="/contact-us" passHref>
+                    <Typography
+                      variant="body-1"
+                      sx={{ color: "var(--blue)", marginRight: "0.5rem" }}
+                    >
+                      Get in touch with us
+                    </Typography>
+                  </Link>
                   <div className="body-1">
                     <ArrowRight />
                   </div>
@@ -177,7 +181,7 @@ export default function Home() {
           <div className="flex justify-between items-center">
             <div className="h3 md:h2">View our projects</div>
             <div className="hidden md:flex items-center">
-              <Link href={"/"} passHref>
+              <Link href={"/work"} passHref>
                 <div className="label-2 mr-3 cursor-pointer hover:underline">
                   View More
                 </div>

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 import ArrowRight from "../icons/ArrowRight";
 
 function SendEnquiry() {
@@ -61,9 +62,11 @@ function SendEnquiry() {
 
             <div className="mt-7 text-center">
               <div className="flex justify-center items-center cursor-pointer hover:underline">
-                <Typography variant="subtitle2" className="mr-2">
-                  Get in touch with us
-                </Typography>
+                <Link href="/contact-us" passHref>
+                  <Typography variant="subtitle2" className="mr-2">
+                    Get in touch with us
+                  </Typography>
+                </Link>
                 <div>
                   <ArrowRight />
                 </div>
