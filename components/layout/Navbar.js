@@ -14,10 +14,16 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 const pages = ["Products", "Pricing", "Blog"];
 
 function Navbar() {
+  const trigger = useScrollTrigger({
+    target: typeof window !== "undefined" ? window : undefined,
+  });
+
+  console.log(trigger);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -37,7 +43,15 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#1C1E53" }} elevation={0}>
+    <AppBar
+      position="fixed"
+      sx={{
+        backgroundColor: trigger ? "rgba(28, 30, 83, 0.8)" : "#1C1E53",
+        backdropFilter: "blur(9.9px)",
+        "-webkit-backdrop-filter": "blur(9.9px)",
+      }}
+      elevation={0}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1 }}>

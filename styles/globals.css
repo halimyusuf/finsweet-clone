@@ -207,3 +207,12 @@ input:focus {
   background: transparent;
   color: white;
 }
+
+.glass-bg {
+  background: rgba(28, 30, 83, 0.51);
+  border-radius: 16px;
+  backdrop-filter: blur(9.9px);
+  -webkit-backdrop-filter: blur(9.9px);
+}
+
+/* rgb(28, 30, 83) */
