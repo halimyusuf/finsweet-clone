@@ -71,7 +71,7 @@ export default function Work() {
       </div>
 
       <div>
-        <div className="container mx-auto my-14 text-darkblue">
+        <div className="container mx-auto mt-8 mb-14 md:mt-14 text-darkblue">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {workExamples.map((work) => (
               <div key={work.title} className="my-2 px-2">
