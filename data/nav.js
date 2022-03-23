@@ -15,10 +15,10 @@ export const navItems = [
     label: "Pricing",
     route: "/pricing",
   },
-  {
-    label: "FAQ",
-    route: "/",
-  },
+  // {
+  //   label: "FAQ",
+  //   route: "/",
+  // },
   {
     label: "Blog",
     route: "/blog",

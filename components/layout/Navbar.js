@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { navItems } from "../../data/nav";
 import { Button } from "@mui/material";
@@ -15,10 +15,13 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+import Sidenav from "./sidenav";
 
 const pages = ["Products", "Pricing", "Blog"];
 
 function Navbar() {
+  const [isOpen, setOpen] = useState(false);
+
   const trigger = useScrollTrigger({
     target: typeof window !== "undefined" ? window : undefined,
     disableHysteresis: true,
@@ -28,7 +31,7 @@ function Navbar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
+    setOpen(true);
   };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
@@ -43,73 +46,76 @@ function Navbar() {
   };
 
   return (
-    <AppBar
-      position={trigger ? "fixed" : "static"}
-      sx={{
-        backgroundColor: trigger ? "rgba(28, 30, 83, 0.8)" : "#1C1E53",
-        backdropFilter: "blur(9.9px)",
-        "-webkit-backdrop-filter": "blur(9.9px)",
-      }}
-      elevation={0}
-    >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1 }}>
-            <Image src="/nav/logo.svg" alt="logo" height="28" width="122" />
-          </Box>
+    <>
+      <AppBar
+        position={trigger ? "fixed" : "static"}
+        sx={{
+          backgroundColor: trigger ? "rgba(28, 30, 83, 0.8)" : "#1C1E53",
+          backdropFilter: "blur(9.9px)",
+          "-webkit-backdrop-filter": "blur(9.9px)",
+        }}
+        elevation={0}
+      >
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Box sx={{ flexGrow: 1 }}>
+              <Image src="/nav/logo.svg" alt="logo" height="28" width="122" />
+            </Box>
 
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
+            <Box sx={{ display: { xs: "flex", md: "none" } }}>
+              <IconButton
+                size="large"
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
+            </Box>
+
+            <Box
+              sx={{ display: { xs: "none", md: "flex", alignItems: "center" } }}
             >
-              <MenuIcon />
-            </IconButton>
-          </Box>
-
-          <Box
-            sx={{ display: { xs: "none", md: "flex", alignItems: "center" } }}
-          >
-            {navItems.map((page) => (
-              <Link href={page.route} key={page.label} passHref>
-                <Typography
-                  variant="subtitle1"
-                  gutterBottom
+              {navItems.map((page) => (
+                <Link href={page.route} key={page.label} passHref>
+                  <Typography
+                    variant="subtitle1"
+                    gutterBottom
+                    sx={{
+                      marginRight: "1rem",
+                      color: "#bbbbcb",
+                      cursor: "pointer",
+                      "&:hover": { color: "white" },
+                    }}
+                  >
+                    {page.label}
+                  </Typography>
+                </Link>
+              ))}
+              <div className="ml-2">
+                <Button
+                  size="large"
+                  variant="outlined"
                   sx={{
-                    marginRight: "1rem",
-                    color: "#bbbbcb",
-                    cursor: "pointer",
-                    "&:hover": { color: "white" },
+                    color: "white",
+                    borderRadius: "999px",
+                    border: "1px solid rgba(187, 187, 203, 0.4)",
+                    textTransform: "capitalize",
+                    // border: "1px solid rgb(203 213 225)",
+                    "&:hover": { border: "1px solid rgb(203 213 225)" },
                   }}
                 >
-                  {page.label}
-                </Typography>
-              </Link>
-            ))}
-            <div className="ml-2">
-              <Button
-                size="large"
-                variant="outlined"
-                sx={{
-                  color: "white",
-                  borderRadius: "999px",
-                  border: "1px solid rgba(187, 187, 203, 0.4)",
-                  textTransform: "capitalize",
-                  // border: "1px solid rgb(203 213 225)",
-                  "&:hover": { border: "1px solid rgb(203 213 225)" },
-                }}
-              >
-                <Typography variant="body2">Contact Us</Typography>
-              </Button>
-            </div>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+                  <Typography variant="body2">Contact Us</Typography>
+                </Button>
+              </div>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+      <Sidenav open={isOpen} setOpen={setOpen} />
+    </>
     // <div>
     //   <div className="bg-tintblue h-[82px]">
     //     <div className="h-full flex justify-between items-center container mx-auto">
