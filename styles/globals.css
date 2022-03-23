@@ -39,6 +39,10 @@ body {
   color: var(--darkblue);
 }
 
+#nprogress .bar {
+  background: var(--grey) !important;
+}
+
 .site-cont {
   display: flex;
   flex-direction: column;
