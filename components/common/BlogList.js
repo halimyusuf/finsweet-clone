@@ -7,8 +7,8 @@ import ArrowRight from "../icons/ArrowRight";
 function BlogList({ image_url: imgUrl, date, title, content, id }) {
   return (
     <div className="mb-4">
-      <div className="aspect-video w-[100%] mb-1">
-        <img src={imgUrl} className="w-[100%] h-[100%]" alt="Blog image" />
+      <div className="aspect-video w-[100%] mb-1 relative">
+        <Image layout="fill" src={imgUrl} objectFit="cover" alt="Blog image" />
       </div>
       <div className="mb-2">
         <Typography variant="caption" className="opacity-70 text-darkblue">
