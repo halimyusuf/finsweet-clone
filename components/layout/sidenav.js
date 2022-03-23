@@ -11,8 +11,15 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { navItems } from "../../data/nav";
 import Link from "next/link";
-import { IconButton, Typography } from "@mui/material";
+import { Drawer, IconButton, Paper, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import CloseIcon from "@mui/icons-material/Close";
+
+const useStyles = makeStyles({
+  paper: {
+    background: "transparent",
+  },
+});
 
 export default function Sidenav({ open, setOpen }) {
   // const [state, setState] = React.useState(false);
@@ -32,15 +39,17 @@ export default function Sidenav({ open, setOpen }) {
   const anchor = "right";
 
   const list = (anchor) => (
-    <Box
+    <Paper
       sx={{
-        width: anchor === "top" || anchor === "bottom" ? "auto" : 300,
+        width: "300px",
+
+        minWidth: "100%",
         height: "100%",
-        backgroundColor: "rgba(244, 246, 252, 0.56)",
-        backdropFilter: "blur(8.4px)",
-        "-webkit-backdrop-filter": "blur(8.4px)",
+        backgroundColor: "rgba(244, 246, 252, 0.75)",
+        // backgroundColor: "rgba(0, 0, 0, 0.2)",
+        backdropFilter: "blur(6px)",
+        "-webkit-backdrop-filter": "blur(6px)",
       }}
-      role="presentation"
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
@@ -60,16 +69,16 @@ export default function Sidenav({ open, setOpen }) {
       </div>
       <List>
         {navItems.map((page) => (
-          <React.Fragment key={page.label}>
-            <ListItem button>
+          <div className="" key={page.label}>
+            <ListItem>
               <Link href={page.route} passHref>
                 <Typography
-                  variant="subtitle1"
+                  variant="h6"
                   gutterBottom
                   sx={{
                     color: "var(--darkblue)",
                     cursor: "pointer",
-                    margin: "0 auto ",
+                    margin: "1rem auto ",
                   }}
                 >
                   {page.label}
@@ -77,7 +86,7 @@ export default function Sidenav({ open, setOpen }) {
               </Link>
             </ListItem>
             <Divider />
-          </React.Fragment>
+          </div>
         ))}
 
         {/* {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
@@ -89,24 +98,27 @@ export default function Sidenav({ open, setOpen }) {
           </ListItem>
         ))} */}
       </List>
-    </Box>
+    </Paper>
   );
+
+  const classes = useStyles();
 
   return (
     <div>
       <React.Fragment>
-        <SwipeableDrawer
+        <Drawer
+          classes={{ paper: classes.paper }}
           anchor={anchor}
           open={open}
           onClose={toggleDrawer(false)}
           onOpen={toggleDrawer(true)}
           sx={{
-            backdropFilter: "blur(8.4px)",
-            "-webkit-backdrop-filter": "blur(8.4px)",
+            backdropFilter: "blur(3px)",
+            "-webkit-backdrop-filter": "blur(3px)",
           }}
         >
           {list(anchor)}
-        </SwipeableDrawer>
+        </Drawer>
       </React.Fragment>
     </div>
   );
