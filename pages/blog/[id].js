@@ -5,7 +5,7 @@ export default function SingleBlog() {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="my-14">
+        <div className="mt-10 md:mt-14 mb-14">
           <div className="text-center">
             <div
               className="py-4"

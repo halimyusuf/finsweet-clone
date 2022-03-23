@@ -10,8 +10,8 @@ export default function ReadCaseStudy() {
 
   return (
     <div>
-      <div className="pt-4">
-        <div className="container mx-auto text-darkblue my-14 px-3">
+      <div className="md:pt-4">
+        <div className="container mx-auto text-darkblue mt-10 md:mt-14 mb-14 px-3">
           <div>
             <Typography variant="body1" sx={{ opacity: 0.8 }}>
               Web design and development
