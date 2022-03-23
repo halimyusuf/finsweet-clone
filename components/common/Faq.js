@@ -47,7 +47,13 @@ function Faq() {
                     >
                       <div className="mb-2"> {item.title} </div>
                       {currentFaq === i && (
-                        <Typography variant="subtitle1" sx={{ opacity: "0.8" }}>
+                        <Typography
+                          variant="subtitle1"
+                          sx={{
+                            opacity: "0.8",
+                            transition: "height .3s ease-in-out",
+                          }}
+                        >
                           {item.label}
                         </Typography>
                       )}
