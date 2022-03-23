@@ -21,6 +21,6 @@ export const navItems = [
   },
   {
     label: "Blog",
-    route: "/",
+    route: "/blog",
   },
 ];
