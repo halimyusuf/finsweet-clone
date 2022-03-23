@@ -21,9 +21,9 @@ const pages = ["Products", "Pricing", "Blog"];
 function Navbar() {
   const trigger = useScrollTrigger({
     target: typeof window !== "undefined" ? window : undefined,
+    disableHysteresis: true,
   });
 
-  console.log(trigger);
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
