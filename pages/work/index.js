@@ -100,12 +100,12 @@ export default function Work() {
                   </Typography>
                 </div>
                 <div className="flex items-center mt-2">
-                  <Link href={"/"} passHref>
+                  <Link href={`/work/${work.id}`} passHref>
                     <Typography
                       variant="subtitle2"
                       className="mr-3 cursor-pointer hover:underline text-darkblue"
                     >
-                      Read More
+                      Read case study
                     </Typography>
                   </Link>
                   <div>

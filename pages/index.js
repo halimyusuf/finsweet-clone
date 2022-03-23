@@ -16,8 +16,11 @@ import SendEnquiry from "../components/home/SendEnquiry";
 import BlogList from "../components/common/BlogList";
 import SectDescCard from "../components/common/SectDescCard";
 import { Button, Card, CardContent, Typography } from "@mui/material";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div>
       <div className="bg-tintblue text-white pb-20">
@@ -45,9 +48,9 @@ export default function Home() {
                 View our work
               </div>
               <div className="body-1 cursor-pointer hover:underline flex items-center">
-                <nuxt-link href="/pricing">
+                <Link href="/pricing" passHref>
                   <div className="mr-2">View Pricing</div>
-                </nuxt-link>
+                </Link>
                 <ArrowRight />
               </div>
             </div>
@@ -112,6 +115,7 @@ export default function Home() {
                 padding: "0.5rem 2.5rem",
                 "&:hover": { background: "var(--lightyellow)" },
               }}
+              onClick={() => router.push("/work")}
             >
               <Typography variant="body-2 capitalize">View our work</Typography>
             </Button>
