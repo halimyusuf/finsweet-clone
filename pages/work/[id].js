@@ -1,11 +1,13 @@
 import { Button, Typography } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { workExamples } from "../../data/work";
 
 export default function ReadCaseStudy() {
   const router = useRouter();
-  const work = workExamples.find((a) => a.id == router.query.id);
+  let work = workExamples.find((a) => a.id == router.query.id);
+
   return (
     <div>
       <div className="pt-4">
@@ -65,20 +67,22 @@ export default function ReadCaseStudy() {
             </Typography>
           </div>
 
-          <div className="mt-10">
-            <div style={{ background: work.bg }} className="md:w-[80%]">
-              <div className="mx-8 py-8">
-                <div className="aspect-video w-[100%] mx-auto relative">
-                  <Image
-                    src={work.imgUrl}
-                    layout="fill"
-                    objectFit="cover"
-                    alt=""
-                  />
+          {work && (
+            <div className="mt-10">
+              <div style={{ background: work.bg }} className="md:w-[80%]">
+                <div className="mx-8 py-8">
+                  <div className="aspect-video w-[100%] mx-auto relative">
+                    <Image
+                      src={work.imgUrl}
+                      layout="fill"
+                      objectFit="cover"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
 
           <div>
             <div
