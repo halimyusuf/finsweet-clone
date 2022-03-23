@@ -11,7 +11,7 @@ export default function ReadCaseStudy() {
   return (
     <div>
       <div className="pt-4">
-        <div className="container mx-auto text-darkblue my-14">
+        <div className="container mx-auto text-darkblue my-14 px-3">
           <div>
             <Typography variant="body1" sx={{ opacity: 0.8 }}>
               Web design and development
@@ -86,10 +86,10 @@ export default function ReadCaseStudy() {
 
           <div>
             <div
-              className="grid grid-cols-4 gap-4 py-10"
+              className="grid grid-cols-3 gap-4 py-10"
               style={{ borderBottom: "1px solid rgba(40, 41, 56, 0.3)" }}
             >
-              <div>
+              <div className="text-center">
                 <div className="mb-1">
                   <Typography variant="subtitle2" sx={{ opacity: 0.8 }}>
                     Client
@@ -99,7 +99,7 @@ export default function ReadCaseStudy() {
                   <Typography variant="body1">Facebook.com</Typography>
                 </div>
               </div>
-              <div>
+              <div className="text-center">
                 <div className="mb-1">
                   <Typography variant="subtitle2" sx={{ opacity: 0.8 }}>
                     Service
@@ -109,7 +109,7 @@ export default function ReadCaseStudy() {
                   <Typography variant="body1">Product Design</Typography>
                 </div>
               </div>
-              <div>
+              <div className="text-center">
                 <div className="mb-1">
                   <Typography variant="subtitle2" sx={{ opacity: 0.8 }}>
                     Deliverable
