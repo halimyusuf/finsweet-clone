@@ -5,6 +5,10 @@ import ComapanySupport from "../../components/common/CompanySupports";
 import DescAndImage from "../../components/common/DescAndImage";
 import { descImage } from "../../data/features";
 import Faq from "../../components/common/Faq";
+import GradientLine from "../../components/common/GradientLine";
+import GradientLine2 from "../../components/common/GradientLine2";
+import SDots from "../../components/common/SDots";
+
 import Link from "next/link";
 
 export default function Features() {
@@ -48,10 +52,10 @@ export default function Features() {
             </div>
           </div>
           {/* column 2 */}
-          <div>
+          <div className="mb-10 md:mb-0">
             <div className="aspect-video w-[80%] mx-auto glass-bg-1 rounded-lg relative py-3">
-              <div className="px-6 mx-auto min-h-[100%] h-[100%]">
-                <div className="glass-bg-4 w-full h-[18%] max-h-[33px] rounded-full px-4">
+              <div className=" w-[86%] mx-auto mx-auto min-h-[100%] h-[100%]">
+                <div className="glass-bg-4 w-full h-[10%] max-h-[33px] rounded-full px-3">
                   <div className="flex h-[100%] items-center">
                     {dotC.map((dot) => (
                       <SDots key={dot} color={dot} />
@@ -61,38 +65,77 @@ export default function Features() {
               </div>
 
               {/* image */}
-              <div className="absolute aspect-video w-[40%] glass-bg-2 top-[25%] left-[-10%] rounded-md">
-                <div className="grid grid-cols-2 gap-4 py-6 px-3 h-[100%]">
-                  <div className="px-3 py-3 glass-bg-5 h-[100%] w-[100%] rounded-md flex items-end">
-                    <Image
-                      src="/Vector 9.svg"
-                      alt="img"
-                      width="100%"
-                      height="50%"
-                    />
+
+              {/* gradient lines right */}
+              <div className="absolute aspect-[7/3] w-[42%] glass-bg-6 top-[20%] left-[7%] rounded-md px-1 py-1">
+                <div className="h-[100%] grid grid-cols-3 gap-1">
+                  <div className="h-[100%] w-[100%] glass-bg-6 rounded"></div>
+                  <div className="h-[100%] w-[100%] rounded glass-bg-6 col-span-2"></div>
+                  <div className="h-[100%] w-[100%] rounded flex flex-col  justify-between">
+                    <div
+                      className="h-[15%] w-[100%] rounded"
+                      style={{ background: "rgba(48, 50, 98, 0.5)" }}
+                    ></div>
+                    <div
+                      className="h-[15%] w-[100%] rounded"
+                      style={{ background: "rgba(48, 50, 98, 0.5)" }}
+                    ></div>
+                    <div
+                      className="h-[15%] w-[100%] rounded"
+                      style={{ background: "rgba(48, 50, 98, 0.5)" }}
+                    ></div>
+                    <div
+                      className="h-[15%] w-[100%] rounded"
+                      style={{ background: "rgba(48, 50, 98, 0.5)" }}
+                    ></div>
                   </div>
-                  <div>
-                    <div className="h-[100%]">
-                      <>
-                        {gradientBox1.map((gr, i) => (
-                          <GradientLine key={gr.color + i} gr={gr} />
-                        ))}
-                      </>
-                      <div className="grid grid-cols-2 gap-2">
-                        <div className="aspect-square h-[100%] rounded-full bg-[#767799]"></div>
-                        <div className="aspect-square h-[100%] rounded-md bg-[#767799]"></div>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="h-[100%] w-[100%] glass-bg-6 rounded"></div>
+                  <div className="h-[100%] w-[100%] glass-bg-6 rounded"></div>
                 </div>
               </div>
 
-              {/* gradient lines */}
-              <div className="absolute aspect-video w-[38%] glass-bg-3 bottom-[10%] right-[-10%] rounded-md px-3 py-3">
-                <div className="min-h-[100%] h-[100%]">
+              {/* gradient lines bottom */}
+              <div className="absolute w-[86%] h-[30%] left-[7%] bottom-[10%] glass-bg-8 rounded-md px-3 py-3">
+                <div className="min-h-[100%] h-[100%]"></div>
+              </div>
+
+              {/* gradient lines right */}
+              <div
+                className="absolute aspect-[7/3] w-[38%] top-[20%] right-[7%] rounded-md px-2 py-2"
+                style={{
+                  border: "1px solid rgba(255, 255, 255, 0.15)",
+                }}
+              >
+                <div className="h-[100%] flex flex-col justify-between">
                   {gradientBox2.map((gr, i) => (
                     <GradientLine2 key={gr[0] + i} grds={gr} />
                   ))}
+                </div>
+              </div>
+
+              {/* gradient lines left */}
+              <div
+                className="absolute aspect-[7/3] w-[38%] bottom-[-10%] left-[-15%] rounded-md px-2 py-2"
+                style={{
+                  border: "1px solid rgba(255, 255, 255, 0.15)",
+                }}
+              >
+                <div className="h-[100%] flex flex-col justify-between">
+                  {gradientBox2.map((gr, i) => (
+                    <GradientLine2 key={gr[0] + i} grds={gr} />
+                  ))}
+                </div>
+              </div>
+
+              {/* Setting image */}
+              <div className="absolute aspect-[5/4] w-[25%] bottom-[-15%] right-[-10%] rounded-md">
+                <div className="min-h-[100%] h-[100%] w-[100%] relative">
+                  <Image
+                    alt=""
+                    layout="fill"
+                    src="/Fill 1.svg"
+                    objectFit="contain"
+                  />
                 </div>
               </div>
             </div>
@@ -147,45 +190,6 @@ export default function Features() {
           <Faq />
         </div>
       </div>
-    </div>
-  );
-}
-
-function SDots({ color }) {
-  return (
-    <div
-      className="aspect-square h-[13px] max-h-[40%] rounded-full mr-2"
-      style={{ background: color }}
-    ></div>
-  );
-}
-
-function GradientLine({ gr }) {
-  return (
-    <div
-      className="rounded-full h-[13%] mb-[10%]"
-      style={{
-        background: gr.color,
-        width: gr.line,
-      }}
-    ></div>
-  );
-}
-
-function GradientLine2({ grds }) {
-  return (
-    <div className="flex w-[100%] mb-[6%] h-[8%]">
-      {grds.map((gr) => (
-        <div
-          key={gr.line}
-          className="rounded-full"
-          style={{
-            background: gr.color,
-            width: gr.line,
-            marginRight: "3px",
-          }}
-        ></div>
-      ))}
     </div>
   );
 }

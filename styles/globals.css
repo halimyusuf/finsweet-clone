@@ -183,6 +183,30 @@ a {
   background: rgba(255, 255, 255, 0.17);
 }
 
+.glass-bg-6 {
+  background: linear-gradient(
+    155.2deg,
+    rgba(255, 255, 255, 0.31) -19.41%,
+    rgba(255, 255, 255, 0) 117.23%
+  );
+}
+
+.glass-bg-7 {
+  background: linear-gradient(
+    155.2deg,
+    rgba(255, 255, 255, 0.31) -19.41%,
+    rgba(255, 255, 255, 0) 117.23%
+  );
+}
+
+.glass-bg-8 {
+  background: linear-gradient(
+    228.81deg,
+    rgba(255, 255, 255, 0.31) -64.03%,
+    rgba(255, 255, 255, 0) 104.91%
+  );
+}
+
 /* svg path {
   stroke-width: 1 !important;
 } */

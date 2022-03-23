@@ -96,20 +96,22 @@ function Navbar() {
                 </Link>
               ))}
               <div className="ml-2">
-                <Button
-                  size="large"
-                  variant="outlined"
-                  sx={{
-                    color: "white",
-                    borderRadius: "999px",
-                    border: "1px solid rgba(187, 187, 203, 0.4)",
-                    textTransform: "capitalize",
-                    // border: "1px solid rgb(203 213 225)",
-                    "&:hover": { border: "1px solid rgb(203 213 225)" },
-                  }}
-                >
-                  <Typography variant="body2">Contact Us</Typography>
-                </Button>
+                <Link href="/contact-us" passHref>
+                  <Button
+                    size="large"
+                    variant="outlined"
+                    sx={{
+                      color: "white",
+                      borderRadius: "999px",
+                      border: "1px solid rgba(187, 187, 203, 0.4)",
+                      textTransform: "capitalize",
+                      // border: "1px solid rgb(203 213 225)",
+                      "&:hover": { border: "1px solid rgb(203 213 225)" },
+                    }}
+                  >
+                    <Typography variant="body2">Contact Us</Typography>
+                  </Button>
+                </Link>
               </div>
             </Box>
           </Toolbar>
