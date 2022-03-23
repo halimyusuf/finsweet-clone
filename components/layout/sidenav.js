@@ -106,7 +106,7 @@ export default function Sidenav({ open, setOpen }) {
   return (
     <div>
       <React.Fragment>
-        <Drawer
+        <SwipeableDrawer
           classes={{ paper: classes.paper }}
           anchor={anchor}
           open={open}
@@ -118,7 +118,7 @@ export default function Sidenav({ open, setOpen }) {
           }}
         >
           {list(anchor)}
-        </Drawer>
+        </SwipeableDrawer>
       </React.Fragment>
     </div>
   );
