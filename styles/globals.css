@@ -207,6 +207,14 @@ a {
   );
 }
 
+.glass-bg-9 {
+  background: linear-gradient(
+    266.47deg,
+    #767799 7.5%,
+    rgba(118, 119, 153, 0) 144.67%
+  );
+}
+
 /* svg path {
   stroke-width: 1 !important;
 } */

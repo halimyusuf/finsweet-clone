@@ -20,6 +20,7 @@ import GradientLine2 from "../components/common/GradientLine2";
 import SDots from "../components/common/SDots";
 import { Button, Card, CardContent, Typography } from "@mui/material";
 import { useRouter } from "next/router";
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 
 export default function Home() {
   const router = useRouter();
@@ -108,6 +109,47 @@ export default function Home() {
                   {gradientBox2.map((gr, i) => (
                     <GradientLine2 key={gr[0] + i} grds={gr} />
                   ))}
+                </div>
+              </div>
+
+              {/* File icon */}
+              {/* <div className="absolute bg-[#1ABCFE] top-[20%] left-[40%] rounded">
+                <div className="flex items-center justify-center">
+                  <div className="h-[20%]">
+                    <InsertDriveFileIcon sx={{ height: "100%" }} />
+                  </div>
+                </div>
+              </div> */}
+
+              {/* code icon */}
+              <div className="absolute bg-[#FFC04A] top-[25%] right-[15%] rounded text-darkblue">
+                <div className="w-[25px] h-[25px] flex items-center justify-center">
+                  <div className="flex">
+                    <div className="mr-1">{"{"}</div>
+                    <div>{"}"}</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Horizontal line 1 */}
+              <div className="absolute w-[20%] top-[35%] left-[30%]">
+                <div className="relative">
+                  <div
+                    className="h-[10px] w-[10px] border-[1px] border-[#63648A] rounded-full ml-[30%] "
+                    style={{ background: "rgb(255, 255, 255)", zIndex: 10 }}
+                  ></div>
+                  <div className="h-[1px] h-max-[1px] w-[100%] glass-bg-9 flex flex-col absolute top-[50%] translate-y-[-1px] justify-between"></div>
+                </div>
+              </div>
+
+              {/* Horizontal line 1 */}
+              <div className="absolute w-[20%] bottom-[20%] right-[30%]">
+                <div className="relative">
+                  <div
+                    className="h-[10px] w-[10px] border-[1px] border-[#63648A] rounded-full ml-[30%] "
+                    style={{ background: "rgb(255, 255, 255)", zIndex: 10 }}
+                  ></div>
+                  <div className="h-[1px] h-max-[1px] w-[100%] glass-bg-9 flex flex-col absolute top-[50%] translate-y-[-1px] justify-between"></div>
                 </div>
               </div>
             </div>
