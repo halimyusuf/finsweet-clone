@@ -63,7 +63,7 @@ export default function Home() {
           </div>
           {/* column 2 */}
           <div>
-            <div className="aspect-video w-[80%] mx-auto glass-bg-1 rounded-lg relative py-3">
+            <div className="aspect-video w-[80%] w-max-[80%] mx-auto glass-bg-1 rounded-lg relative py-3">
               <div className="w-[90%] mx-auto min-h-[100%] h-[100%]">
                 <div className="glass-bg-4 w-full h-[13%] max-h-[33px] rounded-full px-4">
                   <div className="flex h-[100%] items-center">
@@ -141,6 +141,19 @@ export default function Home() {
                   <div className="h-[1px] h-max-[1px] w-[100%] glass-bg-9 flex flex-col absolute top-[50%] translate-y-[-1px] justify-between"></div>
                 </div>
               </div>
+
+              <div className="absolute top-[35%] left-[50%] h-[calc(41%)]">
+                <div className="mt-[4px] w-[1px] w-max-[1px] h-[100%] glass-bg-9"></div>
+              </div>
+
+              <div className="absolute top-[55%] left-[40%] h-[20%]">
+                {/* <div className="aspect-square h-[100%] border-[1px] border-[red] rounded-full"></div> */}
+                <Image src="/Vector-6.svg" alt="" width="20" height="20" />
+              </div>
+
+              {/* <div className="pb-[5px] absolute bottom-[20%] right-[50%] h-[5%]">
+                <div className="w-[1px] w-max-[1px] h-[100%] glass-bg-9"></div>
+              </div> */}
 
               {/* Horizontal line 1 */}
               <div className="absolute w-[20%] bottom-[20%] right-[30%]">

@@ -158,18 +158,20 @@ export default function Work() {
           </div>
 
           <div className="text-center mt-4">
-            <Button
-              size="large"
-              sx={{
-                background: "var(--yellow) !important",
-                color: "black",
-                borderRadius: "999px",
-                padding: "0.5rem 2.5rem",
-                "&:hover": { background: "var(--lightyellow)" },
-              }}
-            >
-              <Typography variant="body-2 capitalize">Contact Us</Typography>
-            </Button>
+            <Link href="/contact-us" passHref>
+              <Button
+                size="large"
+                sx={{
+                  background: "var(--yellow) !important",
+                  color: "black",
+                  borderRadius: "999px",
+                  padding: "0.5rem 2.5rem",
+                  "&:hover": { background: "var(--lightyellow)" },
+                }}
+              >
+                <Typography variant="body-2 capitalize">Contact Us</Typography>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

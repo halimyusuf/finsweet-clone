@@ -123,7 +123,7 @@ export default function AboutUs() {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <div className="my-14 container mx-auto">
           <div className="text-center">
             <Typography
@@ -140,7 +140,7 @@ export default function AboutUs() {
             </Typography>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div>
         <div className="bg-[#EEF4FA] my-14">

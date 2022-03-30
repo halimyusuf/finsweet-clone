@@ -1,5 +1,6 @@
 import { Button, Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { workExamples } from "../../data/work";
@@ -283,18 +284,20 @@ export default function ReadCaseStudy() {
           </div>
 
           <div className="text-center mt-4">
-            <Button
-              size="large"
-              sx={{
-                background: "var(--yellow) !important",
-                color: "black",
-                borderRadius: "999px",
-                padding: "0.5rem 2.5rem",
-                "&:hover": { background: "var(--lightyellow)" },
-              }}
-            >
-              <Typography variant="body-2 capitalize">Contact Us</Typography>
-            </Button>
+            <Link href="/contact-us" passHref>
+              <Button
+                size="large"
+                sx={{
+                  background: "var(--yellow) !important",
+                  color: "black",
+                  borderRadius: "999px",
+                  padding: "0.5rem 2.5rem",
+                  "&:hover": { background: "var(--lightyellow)" },
+                }}
+              >
+                <Typography variant="body-2 capitalize">Contact Us</Typography>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
