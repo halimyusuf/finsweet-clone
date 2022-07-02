@@ -45,10 +45,10 @@ export default function Sidenav({ open, setOpen }) {
 
         minWidth: "100%",
         height: "100%",
-        backgroundColor: "rgba(244, 246, 252, 0.75)",
+        backgroundColor: "rgba(244, 246, 252, 1)",
         // backgroundColor: "rgba(0, 0, 0, 0.2)",
-        backdropFilter: "blur(6px)",
-        "-webkit-backdrop-filter": "blur(6px)",
+        // backdropFilter: "blur(6px)",
+        // "-webkit-backdrop-filter": "blur(6px)",
       }}
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
@@ -112,10 +112,12 @@ export default function Sidenav({ open, setOpen }) {
           open={open}
           onClose={toggleDrawer(false)}
           onOpen={toggleDrawer(true)}
-          sx={{
-            backdropFilter: "blur(3px)",
-            "-webkit-backdrop-filter": "blur(3px)",
-          }}
+          sx={
+            {
+              // backdropFilter: "blur(3px)",
+              // "-webkit-backdrop-filter": "blur(3px)",
+            }
+          }
         >
           {list(anchor)}
         </SwipeableDrawer>
